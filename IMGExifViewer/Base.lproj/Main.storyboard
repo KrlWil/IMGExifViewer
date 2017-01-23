@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="x7I-FV-8bc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IMGExifViewer" customModuleProvider="target" sceneMemberID="viewController">
@@ -39,13 +39,13 @@ Exif Viewer</string>
                             <constraint firstItem="6Pe-lk-ASG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="111.5" id="xBp-6f-z9z"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="EhY-28-gty"/>
+                    <navigationItem key="navigationItem" title="Home" id="EhY-28-gty"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="607.5" y="70.5"/>
+            <point key="canvasLocation" x="976" y="74"/>
         </scene>
-        <!--Details View Controller-->
+        <!--Details-->
         <scene sceneID="FwZ-5a-rkM">
             <objects>
                 <tableViewController storyboardIdentifier="vc" id="7iT-z2-zDE" customClass="DetailsViewController" customModule="IMGExifViewer" customModuleProvider="target" sceneMemberID="viewController">
@@ -54,13 +54,16 @@ Exif Viewer</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SyG-qm-ODP">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="SyG-qm-ODP">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SyG-qm-ODP" id="1xH-a9-mHH">
-                                    <frame key="frameInset" width="375" height="43"/>
+                                    <frame key="frameInset" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -68,7 +71,7 @@ Exif Viewer</string>
                             <outlet property="delegate" destination="7iT-z2-zDE" id="GNX-Un-Ll9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="d76-D2-u03"/>
+                    <navigationItem key="navigationItem" title="Details" id="QYV-8o-lYd" userLabel="Back"/>
                     <connections>
                         <outlet property="tableView" destination="lwc-Yi-dnN" id="KKQ-hB-xgD"/>
                         <outlet property="tableView1" destination="lwc-Yi-dnN" id="p43-ay-u0J"/>
@@ -76,25 +79,7 @@ Exif Viewer</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OsJ-pk-JVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1066" y="75"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="VfF-oT-RaC">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="x7I-FV-8bc" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6p9-GG-tNX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="lpd-A0-0Ep"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="imF-Xr-xQQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="20.5" y="70.5"/>
+            <point key="canvasLocation" x="1535" y="87"/>
         </scene>
     </scenes>
     <resources>

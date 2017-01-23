@@ -13,42 +13,67 @@ import Photos
 class DetailsViewController: UITableViewController
 {
 
-    var toSend = [(String, String)]()
-    //var exif: [String] = []
+    let sections : [String] = ["General", "Advanced", "Professional"]
+    var toSend1 = [(String, String)]()
+    var toSend2 = [(String, String)]()
+    var toSend3 = [(String, String)]()
     
+    init(got1: [(String, String)], got2: [(String, String)], got3: [(String, String)]){
+        
+        toSend1 = got1
+        toSend2 = got2
+        toSend3 = got3
+        super.init(nibName: nil , bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    //var exif: [String] = []
+    var sectionData : [Int: [(String, String)]] = [:]
     
     @IBOutlet var tableView1: UITableView!
     
     
         public override func	tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        var countRow = 0
-//        if section == 0 {
-//            countRow = 1
-//        }
-//        if section == 1 {
-//            countRow = 1
-//        }
-//        if section == 2 {
-//            countRow = 1
-//        }
-        return 8
+        var countRow = 0
+        if section == 0 {
+            countRow = toSend1.count
+        }
+        if section == 1 {
+            countRow = toSend2.count
+        }
+        if section == 2 {
+            countRow = toSend3.count
+        }
+        return countRow
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sections[section]
     }
     
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = UITableViewCell(style: .default, reuseIdentifier: "test id")
-        cell.textLabel?.text = toSend[indexPath.row].0 + ": " + toSend[indexPath.row].1
+        var cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        if cell == nil {
+            cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        }
+        
+        //cell?.textLabel?.text = toSend1[indexPath.row].0 + ": " + toSend1[indexPath.row].1
+        cell?.textLabel?.text = sectionData[indexPath.section]![indexPath.row].0 + ": " + sectionData[indexPath.section]![indexPath.row].1
+        
         //cell.detailTextLabel?.text = toSend[indexPath.row].1
-        return cell
+        return cell!
     }
     
     public override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 3
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(toSend)
+        sectionData = [0:toSend1, 1:toSend2, 2:toSend3]
     }
 
     override func didReceiveMemoryWarning() {
