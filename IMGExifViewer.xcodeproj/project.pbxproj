@@ -11,9 +11,13 @@
 		FC3300271DF1DA8600FEFE3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3300261DF1DA8600FEFE3C /* ViewController.swift */; };
 		FC33002C1DF1DA8600FEFE3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC33002B1DF1DA8600FEFE3C /* Assets.xcassets */; };
 		FC33002F1DF1DA8600FEFE3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC33002D1DF1DA8600FEFE3C /* LaunchScreen.storyboard */; };
+		FC41ACC21E773C780038B2DB /* ocean.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC41ACC11E773C780038B2DB /* ocean.jpg */; };
+		FC41ACC41E773D110038B2DB /* ocean2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC41ACC31E773D110038B2DB /* ocean2.jpg */; };
 		FC6BDE281DF6EAA100761748 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6BDE261DF6EAA100761748 /* Photos.framework */; };
 		FC6BDE291DF6EAA100761748 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC6BDE271DF6EAA100761748 /* PhotosUI.framework */; };
 		FC8381EB1E3537070076D992 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8381E91E3537070076D992 /* Main.storyboard */; };
+		FC9316F51E6450B20026BF7F /* Clock-50.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9316F41E6450B20026BF7F /* Clock-50.png */; };
+		FC9316F91E646F380026BF7F /* HistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9316F81E646F380026BF7F /* HistoryTableViewController.swift */; };
 		FCB736F81E32A8350002406B /* lights.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCB736F71E32A8350002406B /* lights.jpg */; };
 		FCB736FA1E32AAB30002406B /* white.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCB736F91E32AAB30002406B /* white.jpg */; };
 		FCB737001E32C1F40002406B /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB736FF1E32C1F40002406B /* DetailsViewController.swift */; };
@@ -27,9 +31,13 @@
 		FC33002B1DF1DA8600FEFE3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC33002E1DF1DA8600FEFE3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC3300301DF1DA8600FEFE3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC41ACC11E773C780038B2DB /* ocean.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ocean.jpg; sourceTree = "<group>"; };
+		FC41ACC31E773D110038B2DB /* ocean2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ocean2.jpg; sourceTree = "<group>"; };
 		FC6BDE261DF6EAA100761748 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		FC6BDE271DF6EAA100761748 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		FC8381EA1E3537070076D992 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FC9316F41E6450B20026BF7F /* Clock-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Clock-50.png"; sourceTree = "<group>"; };
+		FC9316F81E646F380026BF7F /* HistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryTableViewController.swift; sourceTree = "<group>"; };
 		FCB736F71E32A8350002406B /* lights.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lights.jpg; sourceTree = "<group>"; };
 		FCB736F91E32AAB30002406B /* white.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = white.jpg; sourceTree = "<group>"; };
 		FCB736FF1E32C1F40002406B /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +80,7 @@
 				FC3300241DF1DA8600FEFE3C /* AppDelegate.swift */,
 				FC3300261DF1DA8600FEFE3C /* ViewController.swift */,
 				FCB736FF1E32C1F40002406B /* DetailsViewController.swift */,
+				FC9316F81E646F380026BF7F /* HistoryTableViewController.swift */,
 				FC8381E91E3537070076D992 /* Main.storyboard */,
 				FC33002B1DF1DA8600FEFE3C /* Assets.xcassets */,
 				FC33002D1DF1DA8600FEFE3C /* LaunchScreen.storyboard */,
@@ -94,6 +103,9 @@
 		FCB736F61E32A7A90002406B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FC41ACC31E773D110038B2DB /* ocean2.jpg */,
+				FC41ACC11E773C780038B2DB /* ocean.jpg */,
+				FC9316F41E6450B20026BF7F /* Clock-50.png */,
 				FCB737011E32D4410002406B /* iOS Photos.png */,
 				FCB736F71E32A8350002406B /* lights.jpg */,
 				FCB736F91E32AAB30002406B /* white.jpg */,
@@ -162,10 +174,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC8381EB1E3537070076D992 /* Main.storyboard in Resources */,
+				FC41ACC41E773D110038B2DB /* ocean2.jpg in Resources */,
 				FC33002F1DF1DA8600FEFE3C /* LaunchScreen.storyboard in Resources */,
 				FCB737021E32D4420002406B /* iOS Photos.png in Resources */,
+				FC9316F51E6450B20026BF7F /* Clock-50.png in Resources */,
 				FC33002C1DF1DA8600FEFE3C /* Assets.xcassets in Resources */,
 				FCB736F81E32A8350002406B /* lights.jpg in Resources */,
+				FC41ACC21E773C780038B2DB /* ocean.jpg in Resources */,
 				FCB736FA1E32AAB30002406B /* white.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC9316F91E646F380026BF7F /* HistoryTableViewController.swift in Sources */,
 				FC3300271DF1DA8600FEFE3C /* ViewController.swift in Sources */,
 				FC3300251DF1DA8600FEFE3C /* AppDelegate.swift in Sources */,
 				FCB737001E32C1F40002406B /* DetailsViewController.swift in Sources */,

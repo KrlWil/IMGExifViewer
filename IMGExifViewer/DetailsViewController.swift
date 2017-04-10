@@ -18,17 +18,17 @@ class DetailsViewController: UITableViewController
     var toSend2 = [(String, String)]()
     var toSend3 = [(String, String)]()
     
-    init(got1: [(String, String)], got2: [(String, String)], got3: [(String, String)]){
-        
-        toSend1 = got1
-        toSend2 = got2
-        toSend3 = got3
-        super.init(nibName: nil , bundle: nil)
-    }
+//    init(got1: [(String, String)], got2: [(String, String)], got3: [(String, String)]){
+//        
+//        toSend1 = got1
+//        toSend2 = got2
+//        toSend3 = got3
+//        super.init(nibName: nil , bundle: nil)
+//    }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+//    required init?(coder aDecoder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
     //var exif: [String] = []
     var sectionData : [Int: [(String, String)]] = [:]
     
@@ -59,10 +59,9 @@ class DetailsViewController: UITableViewController
             cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         }
         
-        //cell?.textLabel?.text = toSend1[indexPath.row].0 + ": " + toSend1[indexPath.row].1
+
         cell?.textLabel?.text = sectionData[indexPath.section]![indexPath.row].0 + ": " + sectionData[indexPath.section]![indexPath.row].1
         
-        //cell.detailTextLabel?.text = toSend[indexPath.row].1
         return cell!
     }
     

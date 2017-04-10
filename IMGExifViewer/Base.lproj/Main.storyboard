@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0Nq-a3-TwY">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,54 +16,153 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IMGExifViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yAR-84-tfw"/>
-                        <viewControllerLayoutGuide type="bottom" id="Pwe-So-sxt"/>
+                        <viewControllerLayoutGuide type="top" id="igz-bq-4KW"/>
+                        <viewControllerLayoutGuide type="bottom" id="8pU-h5-OOa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pe-lk-ASG" userLabel="Pick Image">
-                                <state key="normal" image="iOS Photos.png"/>
-                                <connections>
-                                    <action selector="btnClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="tmy-06-ekD"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uuq-bZ-zgh">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Mxg-Vq-O1m">
+                                <rect key="frame" x="122" y="233.66666666666669" width="170" height="75.000000000000057"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pe-lk-ASG" userLabel="Pick Image">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="75.000000000000028"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="37V-SZ-LSj">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="75" id="Spv-fa-Unq">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" secondItem="6Pe-lk-ASG" secondAttribute="height" multiplier="1:1" id="hSX-En-4Uh"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="iOS Photos.png"/>
+                                        <connections>
+                                            <action selector="btnClicked" destination="BYZ-38-t0r" eventType="touchUpInside" id="tmy-06-ekD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Adg-W4-LaI" userLabel="Recent">
+                                        <rect key="frame" x="95" y="0.0" width="75" height="75.000000000000028"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="6jS-b9-4aD">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" secondItem="Adg-W4-LaI" secondAttribute="height" multiplier="1:1" id="eq7-z9-shx"/>
+                                            <constraint firstAttribute="height" constant="75" id="tDf-qj-dyZ">
+                                                <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                                            </constraint>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="Clock-50.png"/>
+                                        <connections>
+                                            <segue destination="hLg-Eq-y0i" kind="show" id="gsT-ve-mXq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <variation key="heightClass=regular-widthClass=regular" spacing="100"/>
+                            </stackView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uuq-bZ-zgh">
+                                <rect key="frame" x="44" y="99.999999999999986" width="326" height="83.666666666666643"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="0zS-b5-QND">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="125"/>
+                                    </constraint>
+                                </constraints>
                                 <string key="text">IMG
 Exif Viewer</string>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="50"/>
+                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="6Pe-lk-ASG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6JH-xZ-hbC"/>
-                            <constraint firstItem="Uuq-bZ-zgh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZkO-hU-VJp"/>
-                            <constraint firstItem="Uuq-bZ-zgh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-148" id="ifF-AB-RYZ"/>
-                            <constraint firstItem="6Pe-lk-ASG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="111.5" id="xBp-6f-z9z"/>
+                            <constraint firstItem="Uuq-bZ-zgh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="4H5-iU-top">
+                                <variation key="heightClass=regular-widthClass=regular" constant="236"/>
+                            </constraint>
+                            <constraint firstItem="Uuq-bZ-zgh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="841-f6-kAw"/>
+                            <constraint firstItem="Mxg-Vq-O1m" firstAttribute="top" secondItem="Uuq-bZ-zgh" secondAttribute="bottom" constant="50" id="8bS-Uf-aX2">
+                                <variation key="heightClass=regular-widthClass=regular" constant="262"/>
+                            </constraint>
+                            <constraint firstItem="Uuq-bZ-zgh" firstAttribute="top" secondItem="igz-bq-4KW" secondAttribute="bottom" constant="100" id="KW6-da-kdI">
+                                <variation key="heightClass=regular-widthClass=regular" constant="164"/>
+                            </constraint>
+                            <constraint firstItem="Mxg-Vq-O1m" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b4I-vk-5Jk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="EhY-28-gty"/>
+                    <connections>
+                        <outlet property="lblIMG" destination="Uuq-bZ-zgh" id="KkA-C2-bmy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="976" y="74"/>
+            <point key="canvasLocation" x="3024.21875" y="80.859375"/>
+        </scene>
+        <!--History Table View Controller-->
+        <scene sceneID="agL-q2-Gqv">
+            <objects>
+                <tableViewController id="hLg-Eq-y0i" customClass="HistoryTableViewController" customModule="IMGExifViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" id="e2o-we-a1V">
+                        <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="iBj-uW-062" detailTextLabel="mHJ-Fk-vTO" rowHeight="120" style="IBUITableViewCellStyleSubtitle" id="6dR-pd-k9g">
+                                <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6dR-pd-k9g" id="zlh-7P-rii">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="119.66666666666667"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iBj-uW-062">
+                                            <rect key="frame" x="15" y="43" width="33.333333333333336" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mHJ-Fk-vTO">
+                                            <rect key="frame" x="15" y="63.333333333333336" width="32.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hLg-Eq-y0i" id="syz-3z-EBK"/>
+                            <outlet property="delegate" destination="hLg-Eq-y0i" id="taS-Qt-fjP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="jc3-pD-OEj"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rj7-WU-MXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3039.2000000000003" y="786.65667166416802"/>
         </scene>
         <!--Details-->
         <scene sceneID="FwZ-5a-rkM">
             <objects>
-                <tableViewController storyboardIdentifier="vc" id="7iT-z2-zDE" customClass="DetailsViewController" customModule="IMGExifViewer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="tvc" id="7iT-z2-zDE" customClass="DetailsViewController" customModule="IMGExifViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lwc-Yi-dnN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="SyG-qm-ODP">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SyG-qm-ODP" id="1xH-a9-mHH">
-                                    <frame key="frameInset" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <accessibility key="accessibilityConfiguration">
@@ -71,7 +175,8 @@ Exif Viewer</string>
                             <outlet property="delegate" destination="7iT-z2-zDE" id="GNX-Un-Ll9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Details" id="QYV-8o-lYd" userLabel="Back"/>
+                    <navigationItem key="navigationItem" title="Details" id="jqA-4V-zuX" colorLabel="IBBuiltInLabel-Blue"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <connections>
                         <outlet property="tableView" destination="lwc-Yi-dnN" id="KKQ-hB-xgD"/>
                         <outlet property="tableView1" destination="lwc-Yi-dnN" id="p43-ay-u0J"/>
@@ -79,15 +184,31 @@ Exif Viewer</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OsJ-pk-JVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1535" y="87"/>
+            <point key="canvasLocation" x="4164" y="81.409295352323852"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KAr-sa-kK4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Nq-a3-TwY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="w3O-9E-Fcc"/>
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="scaleToFill" translucent="NO" id="5MA-FP-eQj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Z9n-cY-yfy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w7F-G9-8iZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1894.4000000000001" y="81.859070464767626"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Clock-50.png" width="50" height="50"/>
         <image name="iOS Photos.png" width="50" height="50"/>
     </resources>
-    <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar"/>
-        <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
-    </simulatedMetricsContainer>
 </document>
